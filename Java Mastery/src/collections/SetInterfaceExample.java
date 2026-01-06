@@ -1,7 +1,9 @@
 package collections;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class SetInterfaceExample {
     public static void main(String[] args) {
@@ -21,6 +23,7 @@ public class SetInterfaceExample {
         System.out.println("Contains Sheep ? " + animalsSet.contains("Sheep"));
         */
 
+        /*
         Set<Integer> set1 = new HashSet<>();
         set1.add(10);
         set1.add(12);
@@ -57,6 +60,59 @@ public class SetInterfaceExample {
         Set<Integer> differenceSet = new HashSet<>(set1);
         differenceSet.removeAll(set2);
         System.out.println("differenceSet = " + differenceSet);
+
+        */
+
+        //HashSet
+        System.out.println("******** HashSet ********");
+        HashSet<String> carsHashSet = new HashSet<>();
+        carsHashSet.add("Mercedes");
+        carsHashSet.add("BMW");
+        carsHashSet.add("Ferrari");
+        carsHashSet.add("Ferrari");
+        carsHashSet.add("Ford");
+        carsHashSet.add("Opel");
+        carsHashSet.add("Opel");
+        carsHashSet.add("Honda");
+        System.out.println("carsHashSet = " + carsHashSet);
+
+        //LinkedHashSet
+        System.out.println("******** LinkedHashSet ********");
+        LinkedHashSet<String> carsLinkedHashSet = new LinkedHashSet<>();
+        carsLinkedHashSet.add("Mercedes");
+        carsLinkedHashSet.add("BMW");
+        carsLinkedHashSet.add("Ferrari");
+        carsLinkedHashSet.add("Ferrari");
+        carsLinkedHashSet.add("Ford");
+        carsLinkedHashSet.add("Opel");
+        carsLinkedHashSet.add("Opel");
+        carsLinkedHashSet.add("Honda");
+        System.out.println("carsLinkedHashSet = " + carsLinkedHashSet);
+
+
+        //TreeSet
+        System.out.println("************* TreeSet *************");
+        TreeSet<Character> chars = new TreeSet<>();
+        chars.add('P');
+        chars.add('L');
+        chars.add('R');
+        chars.add('W');
+        chars.add('W');
+        chars.add('N');
+        chars.add('B');
+        chars.add('T');
+        chars.add('T');
+        chars.add('A');
+        System.out.println("Descending = " + chars.descendingSet());
+        System.out.println("chars = " + chars);
+        System.out.println("HeadSet = " + chars.headSet('N', false));
+        System.out.println("SubSet = " + chars.subSet('L', 'T'));
+        System.out.println("TailSet = " + chars.tailSet('N'));
+        System.out.println("FirstElement = " + chars.first());
+        System.out.println("LastElement = " + chars.last());
+        System.out.println("Removed First Element = " + chars.pollFirst());
+        System.out.println("Removed Last Element = " + chars.pollLast());
+        System.out.println("Last version of chars = " + chars);
 
     }
 }
