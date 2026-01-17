@@ -1,1 +1,2 @@
 An interface cannot be used as a normal class because it is a contract without an engine, providing only method signatures that require a concrete class to define the specific logic, state, and performance behaviors (like the difference between a PriorityQueue and a LinkedList).
+Predicate is a functional interface and it has an abstract method called test that returns boolean. 
